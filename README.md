@@ -85,13 +85,26 @@ Copy the URL and Token.
 
 2. Add users to azure AWSSSO application
 
-I have two users created, and I will add them to AWSSSO app the Azure portal as below:
+I have one user created, let's add one new user to Azure AD and I will add them to AWSSSO app in the Azure portal as below:
+
+Goto Azure console --> users --> add new user
+
+![image](https://github.com/tushardashpute/sso_eks_authentication/assets/74225291/d29b7d22-c13c-4a3b-b185-518d06322f9a)
+
+
+![image](https://github.com/tushardashpute/sso_eks_authentication/assets/74225291/c781f36c-4151-468f-82f7-b42ce5ba587b)
+
+Click review and create.
+
+![image](https://github.com/tushardashpute/sso_eks_authentication/assets/74225291/25a784a7-8795-48e5-a18b-611a7ac9402a)
 
 ![image](https://github.com/tushardashpute/sso_eks_authentication/assets/74225291/6a70d42d-8a7d-48a7-bd8f-d3385431a4f7)
 
 3. Add users to AWS
 
 Now click on provisioning under AWS SSO application. 
+
+**Note : With this step we are enabling automatically provisioning of new users to AWS if they are added to the Azure AD.**
 
 ![image](https://github.com/tushardashpute/sso_eks_authentication/assets/74225291/82f1e8af-c6b1-454f-932c-83140764b05d)
 
