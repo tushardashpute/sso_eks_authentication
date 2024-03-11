@@ -110,9 +110,31 @@ Click on start provisioning, it will show 2 users created.
     ![image](https://github.com/tushardashpute/sso_eks_authentication/assets/74225291/870e2959-57d2-4131-a4f0-e8ce7318fe54)
 
 
-5. 
+5. Assign Users to AWS accounts
+
+goto AWS IAM Identity Center --> AWS account 
+![image](https://github.com/tushardashpute/sso_eks_authentication/assets/74225291/c73edb7c-954e-4896-8915-596e7b158fce)
+
+Click on next, we can either add users or groups. I am adding users
+
+![image](https://github.com/tushardashpute/sso_eks_authentication/assets/74225291/c9419285-56f4-4faf-b606-1352a8322f3d)
+
+Assigning admin access, click on next --> submit.
+
+![image](https://github.com/tushardashpute/sso_eks_authentication/assets/74225291/e23a0ff7-d406-4d98-8bb3-2386498b8257)
 
 
+6. Test SSO 
+
+Goto IAM Identity Center --> copy aWS access portal URL.
+
+![image](https://github.com/tushardashpute/sso_eks_authentication/assets/74225291/b296f436-3f32-48da-8f07-551bc1b60f94)
+
+![image](https://github.com/tushardashpute/sso_eks_authentication/assets/74225291/27c1279e-59e3-46d8-8c52-b927772d152f)
+
+Enter the username and password for AD user.
+
+![image](https://github.com/tushardashpute/sso_eks_authentication/assets/74225291/4136beff-4dee-45d6-8ac4-22581d0a9122)
 
 
 ![image](https://github.com/tushardashpute/sso_eks_authentication/assets/74225291/ff8c911b-6cc0-4566-a4cd-91403bdeddc6)
