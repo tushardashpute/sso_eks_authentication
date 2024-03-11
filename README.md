@@ -85,7 +85,7 @@ Copy the URL and Token.
 
 2. Add users to azure AWSSSO application
 
-I have one user created, let's add one new user to Azure AD and I will add them to AWSSSO app in the Azure portal as below:
+I have one user created, let's add one new user to Azure AD.
 
 Goto Azure console --> users --> add new user
 
@@ -97,6 +97,10 @@ Goto Azure console --> users --> add new user
 Click review and create.
 
 ![image](https://github.com/tushardashpute/sso_eks_authentication/assets/74225291/25a784a7-8795-48e5-a18b-611a7ac9402a)
+
+Let's add both users to AWSSSO app in the Azure portal.
+
+Goto Azure Enterprize Application --> click on AWSSSSO app --> click add users
 
 ![image](https://github.com/tushardashpute/sso_eks_authentication/assets/74225291/6a70d42d-8a7d-48a7-bd8f-d3385431a4f7)
 
