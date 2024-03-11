@@ -31,9 +31,88 @@ and pass identity and security information about them to a Service Provider(SP).
 
 1. Configure AWS SSO:
 
+Goto --> IAM Identity Center --> Settings --> Choose Identity source as External Identity Provider
+
+![image](https://github.com/tushardashpute/sso_eks_authentication/assets/74225291/6a49dfd6-681f-43a7-9f2f-1514aa6b1382)
+
+Click Next --> Download service Provider Metadata file (This will be used when we integrate AWS SSO in azure side). This will be used to create trust between Azure AD and AWS.
+
+![image](https://github.com/tushardashpute/sso_eks_authentication/assets/74225291/b33725d0-c4f0-4bec-b0c8-c00e460437e0)
+
+Keep this window open and goto Azure Enterprize Application, there will add AWS SSO application:
+
+![image](https://github.com/tushardashpute/sso_eks_authentication/assets/74225291/b7f23792-80ea-48d7-9703-b8894b33d511)
+
+Click Add new application
+
+![image](https://github.com/tushardashpute/sso_eks_authentication/assets/74225291/edd10cb1-7c25-48af-99c0-1ff6df42bcd6)
+
+Select AWS Single Sing-On, give some name and click on create.
+
+![image](https://github.com/tushardashpute/sso_eks_authentication/assets/74225291/57a54607-aad0-4b0c-a88f-2af8dd12cbda)
+
+Once the Application is created click on set up single sign on
+
+![image](https://github.com/tushardashpute/sso_eks_authentication/assets/74225291/d369f06b-0074-4948-9a6a-53ac09148d09)
+
+Select SAML option:
+
+![image](https://github.com/tushardashpute/sso_eks_authentication/assets/74225291/35ccb41e-91d8-4ac7-8f9a-aba8e714cac4)
+
+Uploca the YAML file which we downloaded from AWS Identity Center:
+
+![image](https://github.com/tushardashpute/sso_eks_authentication/assets/74225291/1d59cb95-e212-44fd-b0e3-d8151f8961a0)
+
+Once uploaded click on Save.
+
+Now download the Federation Metadata XML and Certificate (Base64) file.
+
+![image](https://github.com/tushardashpute/sso_eks_authentication/assets/74225291/0f4a4b0f-68d2-464e-aa73-678dbd7b0b66)
+
+Move back to AWS IAM Identity Center --> Upload the above files as IdP SAML metadata and IdP certificate respectively.
+
+![image](https://github.com/tushardashpute/sso_eks_authentication/assets/74225291/6f05b125-3fc8-438b-af30-324554ab98cd)
+
+Enter ACCEPT and proceed with the change identity source:
+
+![image](https://github.com/tushardashpute/sso_eks_authentication/assets/74225291/7b596171-46b6-40b0-943c-388dff3b85a9)
+
+Post This click on enable automatic provision, which means if we create users in Azure AD it will be automatically created inside AWS.
+
+![image](https://github.com/tushardashpute/sso_eks_authentication/assets/74225291/71578ddc-d27c-4a19-8eb1-473f18b3b6e1)
+
+Copy the URL and Token.
+
+2. Add users to azure AWSSSO application
+
+I have two users created, and I will add them to AWSSSO app the Azure portal as below:
+
+![image](https://github.com/tushardashpute/sso_eks_authentication/assets/74225291/6a70d42d-8a7d-48a7-bd8f-d3385431a4f7)
+
+3. Add users to AWS
+
+Now click on provisioning under AWS SSO application. 
+
+![image](https://github.com/tushardashpute/sso_eks_authentication/assets/74225291/82f1e8af-c6b1-454f-932c-83140764b05d)
+
+Select Automatic and enter the URL and Token which we copied in the above step.
+
+![image](https://github.com/tushardashpute/sso_eks_authentication/assets/74225291/62ec054f-1788-454a-8084-1e38a30f2933)
+
+Click on Test connection.
+
+Click on start provisioning, it will show 2 users created.
+
+![image](https://github.com/tushardashpute/sso_eks_authentication/assets/74225291/8f4c701a-feeb-4216-ac54-22a2becf47b9)
+
+4. verify users at AWS end
+
+    ![image](https://github.com/tushardashpute/sso_eks_authentication/assets/74225291/870e2959-57d2-4131-a4f0-e8ce7318fe54)
 
 
-2. 
+5. 
+
+
 
 
 ![image](https://github.com/tushardashpute/sso_eks_authentication/assets/74225291/ff8c911b-6cc0-4566-a4cd-91403bdeddc6)
