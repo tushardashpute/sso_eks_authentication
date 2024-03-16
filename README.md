@@ -155,3 +155,8 @@ Enter the username and password for AD user.
 
 
 ![image](https://github.com/tushardashpute/sso_eks_authentication/assets/74225291/ff8c911b-6cc0-4566-a4cd-91403bdeddc6)
+
+
+Reference Link : 
+- https://www.youtube.com/watch?v=x7TCs9HxRFg&t=29s
+- https://docs.aws.amazon.com/singlesignon/latest/userguide/idp-microsoft-entra.html
