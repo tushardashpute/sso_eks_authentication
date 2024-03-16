@@ -153,6 +153,9 @@ Enter the username and password for AD user.
 
 ![image](https://github.com/tushardashpute/sso_eks_authentication/assets/74225291/4136beff-4dee-45d6-8ac4-22581d0a9122)
 
+In Windows system, to configure SSO you have to install windows terminal :
+
+- https://github.com/microsoft/terminal
 
 ![image](https://github.com/tushardashpute/sso_eks_authentication/assets/74225291/ff8c911b-6cc0-4566-a4cd-91403bdeddc6)
 
